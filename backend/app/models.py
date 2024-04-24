@@ -111,3 +111,10 @@ class TokenPayload(SQLModel):
 class NewPassword(SQLModel):
     token: str
     new_password: str
+
+
+class Book(SQLModel):
+    id: int | None = Field(default=None, primary_key=True)
+    title: str
+    author: str
+    abstract: str | None
